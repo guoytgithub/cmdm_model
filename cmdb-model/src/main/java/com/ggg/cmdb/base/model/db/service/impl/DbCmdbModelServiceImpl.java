@@ -10,8 +10,6 @@ import com.ggg.cmdb.base.model.db.dao.DbCmdbModelDao;
 import com.ggg.cmdb.base.model.db.entity.CmdbModelEntity;
 import com.ggg.cmdb.base.model.db.service.DbCmdbModelService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,9 +17,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 
-@Service("DbcmdbModelService")
+@Service
 @Slf4j
- public class DbCmdbModelServiceImpl extends ServiceImpl<DbCmdbModelDao, CmdbModelEntity> implements DbCmdbModelService {
+public class DbCmdbModelServiceImpl extends ServiceImpl<DbCmdbModelDao, CmdbModelEntity> implements DbCmdbModelService {
 
     @Override
     public List<CmdbModelEntity> queryByPublicModelId(String publicModelId) {
