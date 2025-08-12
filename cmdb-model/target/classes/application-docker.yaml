@@ -1,0 +1,37 @@
+## 服务相关
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+  #      max-request-size: 150MB
+  thymeleaf:
+    cache: false #测试环境关闭缓存
+  datasource:
+    druid:
+      stat-view-servlet:
+        enabled: false
+      url: jdbc:mysql://192.168.3.24:3309/ciom4?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+      username: root
+      password: 123456
+      maxActive: 3000
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      filter:
+        config:
+          enabled: true
+        stat:
+          db-type: mysql
+          enabled: true
+        wall:
+          config:
+            multi-statement-allow: true
+            none-base-statement-allow: true
+            comment-allow: true
+            condition-and-alway-true-allow: true
+          db-type: mysql
+          enabled: true
+
+  redis:
+    host: 192.168.3.24  #Redis服务器地址
+    port: 16380 #Redis服务器连接端口

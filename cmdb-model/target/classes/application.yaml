@@ -1,0 +1,35 @@
+## 应用相关
+app:
+  name: CMDB
+
+## spring相关配置信息
+spring:
+  profiles:
+    active: docker # 当前激活配置文件 pgshanghai
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 登录验证相关
+
+async:
+  executor:
+    thread:
+      core_pool_size: 100
+      max_pool_size: 150
+      queue_capacity: 500
+      name:
+        prefix: async-job-
+
+sso:
+  excludeUrl:  #不需要做登录验证的地址列表
+  tokenExpireTime: 3600 #登录签名的最大存活时间。每次用户操作，都会刷新签名的存活时间。单位：秒
+  homePage: /itsm-main #登陆后跳转的首页-select
+  system-select-page: /itsm-main
+#  login-page: /page/login_new #登录进入该页面
+log:
+  operate-switch: true # 操作日志开关
+logging:
+  level:
+    root: error
+...

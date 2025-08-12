@@ -1,0 +1,8 @@
+com/ggg/cmdb/base/model/db/service/DbCmdbModelService.class
+com/ggg/cmdb/base/model/db/dao/CmdbBaseMapper.class
+com/ggg/cmdb/base/model/db/dao/DbCmdbModelDao.class
+com/ggg/cmdb/base/model/db/entity/CmdbBaseEntity.class
+com/ggg/cmdb/base/model/api/CmdbModelApi.class
+com/ggg/cmdb/base/model/db/service/impl/DbCmdbModelServiceImpl.class
+com/ggg/cmdb/CMDBWebApplication.class
+com/ggg/cmdb/base/model/db/entity/CmdbModelEntity.class
