@@ -31,5 +31,5 @@ log:
   operate-switch: true # 操作日志开关
 logging:
   level:
-    root: error
+    root: INFO
 ...
