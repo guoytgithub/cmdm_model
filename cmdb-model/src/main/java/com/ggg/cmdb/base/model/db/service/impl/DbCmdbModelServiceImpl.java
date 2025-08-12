@@ -162,9 +162,8 @@ import java.util.stream.Collectors;
     }
 
     @Override
-     public void saveOrUpdateModel(CmdbModelEntity cmdbModelEntity) {
-
-
+    public void saveOrUpdateModel(CmdbModelEntity cmdbModelEntity) {
+        this.saveOrUpdate(cmdbModelEntity);
     }
 
     @Override
