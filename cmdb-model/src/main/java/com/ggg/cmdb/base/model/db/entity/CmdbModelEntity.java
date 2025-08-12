@@ -4,8 +4,6 @@ import cn.hutool.core.util.ObjectUtil;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-
 import lombok.Data;
 
 import java.util.Date;
@@ -21,7 +19,7 @@ import java.util.stream.Collectors;
  */
 @Data
 @TableName("cmdb_model")
-public class CmdbModelEntity extends com.ggg.cmdb.base.model.db.entity.CmdbBaseEntity {
+public class CmdbModelEntity extends CmdbBaseEntity {
     /**
      * 模型ID
      */
@@ -217,4 +215,9 @@ public class CmdbModelEntity extends com.ggg.cmdb.base.model.db.entity.CmdbBaseE
 
     @TableField(exist = false)
     private String name;
+
+    @Override
+    public String getType() {
+        return "CMDB_MODEL";
+    }
 }
